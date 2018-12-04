@@ -1,0 +1,39 @@
+{
+  "name": "vue-sfc-preset",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A Vue.js Preset",
+  "author": "DevilTea <ch870814@gmail.com>",
+  "scripts": {
+    "lint": "vue-cli-service lint"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^7.2.2"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "main": "index.js",
+  "repository": "https://github.com/DevilTea/vue-sfc-preset.git"
+}
